@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="/css/style.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>TO DO</h1>
+        </header>
+        
+        <div1>
+            <h2>Liste des taches</h2>
+           
+            <ul>
+                <% taches.forEach( (Création_tache, index) => {%>
+                    <li>
+                        <%= (Création_tache) %>
+                         <a href="/effacerTaches/<%= index %>">Effacer</a>
+                    </li>
+                    <% }) %>
+            </ul>
+            
+            
+        </div1>
+        <div2>
+            <h3>Ajouter une tache:</h3>
+            
+            <form method="POST" action="/add" onsubmit="showConfirmationMessage">
+                <input type="text" name="nouvelle_tache" required>
+                <input type="submit" value="Sauver">
+                
+            </form>
+           <p id="confirmationMessage"><%= confirmationMessage %></p>
+           
+           <script> 
+            function showConfirmationMessage() {
+                var confirmationMessageElement = document.getElementById('confirmationMessage');
+                confirmationMessageElement.textContent = 'Enregistré';
+                confirmationMessageElement.style.display = 'block';
+               
+            }
+           </script>
+           
+            
+           
+
+        </div2>
+        
+    </body>
+</html>
