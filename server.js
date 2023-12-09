@@ -8,7 +8,7 @@ let confirmationMessage = ''
 
 var mysql= require("mysql2")
 var connection = mysql.createConnection({
-    host: 'localhost',
+    host: '192.168.1.3',
     user: 'root',
     password:'password',
     database:'taches'
