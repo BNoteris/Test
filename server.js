@@ -10,7 +10,7 @@ var mysql= require("mysql2")
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'user',
-    password:'user',
+    password:'password',
     database:'taches'
 })
 connection.connect(function(error) {
